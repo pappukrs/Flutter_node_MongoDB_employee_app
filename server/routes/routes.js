@@ -8,5 +8,6 @@ Router.post('/employee/bulk',EmployeeController.createEmployeesBulk)
 
 Router.get('/employee',EmployeeController.getEmployee)
 Router.get('/',EmployeeController.home)
+Router.get('/*',EmployeeController.notFound)
 
 module.exports = {Router}
