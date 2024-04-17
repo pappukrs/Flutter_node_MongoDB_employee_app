@@ -1,6 +1,6 @@
 const express = require('express');
 const Router = express.Router();
-const EmployeeController = require('./controller/employeeController')
+const EmployeeController = require('../controller/employeeController')
 
 Router.post('/employee/new',EmployeeController.createEmployee)
 Router.post('/employee/bulk',EmployeeController.createEmployeesBulk)

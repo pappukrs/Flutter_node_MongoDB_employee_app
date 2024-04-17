@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const { dbCon } = require('./databases/db');
-const {Router} = require('./routes')
+const {Router} = require('./routes/routes')
 require('dotenv').config();
 
 const PORT = process.env.PORT || 5000; // Default port if PORT is not provided in environment variables
