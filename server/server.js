@@ -11,6 +11,9 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/',Router)
+app.all('*', (req, res) => {
+    res.status(404).send('Route not found');
+  });
 
 app.listen(PORT,"0.0.0.0", async () => {
     try {

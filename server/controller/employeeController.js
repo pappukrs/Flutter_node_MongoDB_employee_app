@@ -16,8 +16,6 @@ const createEmployee = async(req,res)=>{
       console.log("error_CreateEmployee")
       return res.status(400).json({msg:error.message})       
     }
-    
-    
 }
 
 const createEmployeesBulk = async (req, res) => {
@@ -44,8 +42,6 @@ const getEmployee = async(req,res)=>{
       console.log("error_CreateEmployee")
       return res.status(400).json({msg:error.message})       
     }
-    
-    
 }
 
 const home=(req,res)=>{
@@ -56,7 +52,17 @@ const home=(req,res)=>{
     }
 }
 
+const  notFound =(req, res) => {
+
+    try {
+        res.status(404).send('Not Found page');
+    } catch (error) {
+        res.status(404).send('server error');
+    }
+   
+  }
+
 
 module.exports= {
-    createEmployee,getEmployee,createEmployeesBulk,home
+    createEmployee,getEmployee,createEmployeesBulk,home,notFound
 }
