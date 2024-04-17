@@ -48,7 +48,15 @@ const getEmployee = async(req,res)=>{
     
 }
 
+const home=(req,res)=>{
+    try {
+        res.status(200).send("HOME PAGE")
+    } catch (err) {
+        res.status(500).json({msg:"serevr error"})
+    }
+}
+
 
 module.exports= {
-    createEmployee,getEmployee,createEmployeesBulk
+    createEmployee,getEmployee,createEmployeesBulk,home
 }

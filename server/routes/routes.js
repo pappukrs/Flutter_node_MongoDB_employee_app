@@ -7,5 +7,6 @@ Router.post('/employee/bulk',EmployeeController.createEmployeesBulk)
 
 
 Router.get('/employee',EmployeeController.getEmployee)
+Router.get('/',EmployeeController.home)
 
 module.exports = {Router}
