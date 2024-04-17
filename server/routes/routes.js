@@ -6,6 +6,6 @@ Router.post('/employee/new',EmployeeController.createEmployee)
 Router.post('/employee/bulk',EmployeeController.createEmployeesBulk)
 
 
-Router.get('/employee/',EmployeeController.getEmployee)
+Router.get('/employee',EmployeeController.getEmployee)
 
 module.exports = {Router}
