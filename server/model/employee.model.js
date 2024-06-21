@@ -9,8 +9,10 @@ const employeeSchema = mongoose.Schema({
         type :Number,
         required:true
     },
-    joiningDate:{
-
+    joiningDate: {
+        type: String,
+        required: true,
+        match: [/^\d{4}-\d{2}-\d{2}$/, 'Joining date must be in YYYY-MM-DD format']
     },
     isActive:{
         type:Boolean,
